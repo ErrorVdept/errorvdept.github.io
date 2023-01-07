@@ -6,10 +6,7 @@
     <title>Unity WebGL Player | CatsCanFly</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
-    <script>
-      vkBridge.send("VKWebAppInit", {});
-    </script>
+    
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -122,23 +119,7 @@
 
       
 
-      const Banner = () => {
-  
-        const [bannerData, setBannerData] = useState({});
-
-        useEffect(() => {
-          bridge.send('VKWebAppGetAds')
-            .then((bannerInfo) => {
-              setBannerData(bannerInfo);
-            });
-        }, []);
-
-        if (!bannerData) {
-          return null;
-        }
-
-        return <PromoBanner bannerData={bannerData} />;
-      }
+      
     </script>
   </body>
 </html>
